@@ -1,6 +1,7 @@
 import { cn, priceSeperator } from '@/lib/utils'
 import { ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { addProduct, removeProduct, selectCart } from '@/lib/features/cartSlice'
 import { useAppDispatch, useAppSelector } from '@/lib/hooks'
@@ -22,7 +23,10 @@ export default function Product({
     const cart = useAppSelector(selectCart)
 
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             key={id}
             className='border-1 relative flex flex-col gap-2 overflow-hidden rounded-lg border-purple-100 p-4 shadow-lg transition-all hover:bg-purple-50'
         >
@@ -73,6 +77,6 @@ export default function Product({
                     </Button>
                 )}
             </div>
-        </div>
+        </motion.div>
     )
 }

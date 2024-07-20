@@ -71,7 +71,7 @@ export default function Home() {
                                 <Slider
                                     min={minPrice}
                                     max={maxPrice}
-                                    step={10000}
+                                    step={5000}
                                     value={priceRange}
                                     onChange={handlePriceChange}
                                     valueLabelDisplay='auto'

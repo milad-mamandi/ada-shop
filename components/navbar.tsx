@@ -16,7 +16,10 @@ export default function Navbar() {
     const cart = useAppSelector(selectCart)
     return (
         <nav className='py-4'>
-            <div className='flex items-center justify-center text-4xl font-bold'>ADA SHOP</div>
+            <Link href={'/'}>
+                {' '}
+                <div className='flex items-center justify-center text-4xl font-bold'> ADA SHOP</div>
+            </Link>
             <div className='mt-8 flex flex-col gap-2'>
                 <div className='flex flex-row justify-end gap-4'>
                     <Link href={'/'}>
